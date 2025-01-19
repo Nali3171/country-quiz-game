@@ -4,10 +4,43 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Country Quiz game</title>
   </head>
   <body>
-    <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+
+    <div class="game-container">
+        <header class="game-header">
+          <h1>Country Quiz Game</h1>
+        </header>
+
+        //question and ans selection
+        <div class="quiz-container">
+        <div id="question" class="question">Loading question....</div>
+        
+        //answer choices
+        <div class="answers">
+          <button class="answer-btn" data-answer="0">answer 1</button>
+          <button class="answer-btn" data-answer="1">answer 2</button>
+          <button class="answer-btn" data-answer="2">answer 3</button>
+          <button class="answer-btn" data-answer="3">answer 4</button>
+        </div>
+      </div>
+
+      //score section 
+      <div id="score-container" class="score-container">
+        <span id="score">Score: 0</span>
+      </div>
+
+      <button id="restart-button" class="restart-btn" style="display: none;">Restart Quiz!</button>
+
+
+
+
+
+    </div>
+
+
   </body>
 </html>
