@@ -1,0 +1,60 @@
+// src/styles.scss
+
+
+body {
+  background-color: #de83c4;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin:0%;
+}
+
+// main quiz container
+.quiz-container{
+    background-color: pink;
+    padding: 100px;
+    border-radius: 100px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+// Question
+body .quiz-container .question{
+    font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333
+}
+
+body .quiz-container .answers{ 
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 15px;
+}
+
+body .quiz-container .answer-btn{
+    background-color: #e357bb;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px){
+    .quiz-container{
+        max-width: 60%;
+    }
+
+    .question{
+        font-size: 24px;
+    }
+    .answer-btn{
+        font-size: 20px;
+        padding: 20px;
+    }
+}
