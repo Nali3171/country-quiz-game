@@ -10,6 +10,31 @@ const questions: Question[] = [
   answers: ["Kilimanjaro", "Himalayas", "Mount Everest", "Barisan Mountains"],
   correctAnswerIndex: 2,
 },
+{
+  question: "What is the flattest country in the world?",
+  answers: ["Maldives", "Tanzania", "India", "Russia"],
+  correctAnswerIndex: 1,
+},
+{
+  question: "Which country is home to the world's longest Tunnel?",
+  answers: ["Hungary", "Albania", "Switzerland", "Argentina"],
+  correctAnswerIndex: 2,
+},
+{
+  question: "How many uninhabited villages does Russia have?",
+  answers: ["9,000", "100", "50,000", "13,000"],
+  correctAnswerIndex: 3,
+},
+{
+  question: "What is the Taj Mahal made of?",
+  answers: ["Marble", "Brick", "Rubber", "Timber wood"],
+  correctAnswerIndex: 2,
+},
+{
+  question: "what is the most spoken african language?",
+  answers: ["German", "Swahili", "Arabic", "Yoruba"],
+  correctAnswerIndex: 1,
+},
 ];
 
 
