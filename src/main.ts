@@ -37,8 +37,6 @@ const questions: Question[] = [
 },
 ];
 
-
-//Dom Elements
 // DOM Elements
 const questionElement = document.querySelector(".question") as HTMLElement;
 const answerButtons = document.querySelectorAll(".answer-btn") as NodeListOf<HTMLButtonElement>;
@@ -104,7 +102,7 @@ function handleAnswerClick(event: MouseEvent) {
 
 function endGame() {
   questionElement.textContent = "Game Over!";
-  scoreElement.textContent = `Final Score: ${score}`;
+  scoreElement.textContent = `Final Score: ${score} out of ${questions.length}`;
   restartButton.style.display = "block"; // Show restart button
 }
 
