@@ -1,9 +1,12 @@
 import './styles.scss';
 
- 
+ // track the current question index and score
 let currentQuestionIndex = 0;
 let score = 0;
 
+
+//question type
+//create an array of questions text with 4 answer options
 const questions: Question[] = [
 {
   question: "What is the name of the world's tallest mountain?",
@@ -13,7 +16,7 @@ const questions: Question[] = [
 {
   question: "What is the flattest country in the world?",
   answers: ["Maldives", "Tanzania", "India", "Russia"],
-  correctAnswerIndex: 1,
+  correctAnswerIndex: 0,
 },
 {
   question: "Which country is home to the world's longest Tunnel?",
@@ -28,7 +31,7 @@ const questions: Question[] = [
 {
   question: "What is the Taj Mahal made of?",
   answers: ["Marble", "Brick", "Rubber", "Timber wood"],
-  correctAnswerIndex: 2,
+  correctAnswerIndex: 0,
 },
 {
   question: "what is the most spoken african language?",
@@ -36,6 +39,7 @@ const questions: Question[] = [
   correctAnswerIndex: 1,
 },
 ];
+
 
 // DOM Elements
 const questionElement = document.querySelector(".question") as HTMLElement;
@@ -50,6 +54,8 @@ function startGame(){
   score = 0;
  updateUI();
 }
+
+//update current questin and answers
 function updateUI() {
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -68,10 +74,6 @@ function updateUI() {
   // Hide the restart button
   restartButton.style.display = "none";
 }
-
-
-
-
 
 
 // when answer button is clicked
@@ -99,7 +101,7 @@ function handleAnswerClick(event: MouseEvent) {
   }, 1000); // Delay of 1 second before showing the next question
 }
 
-
+// this function will end the game and show final score
 function endGame() {
   questionElement.textContent = "Game Over!";
   scoreElement.textContent = `Final Score: ${score} out of ${questions.length}`;

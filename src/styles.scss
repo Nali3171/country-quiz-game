@@ -1,6 +1,5 @@
 // src/styles.scss
  
-
 body {
   background-color: #de83c4;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -10,19 +9,18 @@ body {
   height: 100vh;
   margin:0%;
 }
-
 // main quiz container
 .quiz-container{
     background-color: pink;
-    padding: 100px;
+    padding: 20px;
     border-radius: 100px;
     width: 80%;
     max-width: 400px;
     text-align: center;
-}
+
 
 // Question
-body .quiz-container .question{
+.question{
     font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -30,13 +28,13 @@ body .quiz-container .question{
 }
 
 //Ansers section
-body .quiz-container .answers{ 
+.answers{ 
     display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   grid-gap: 15px;
-}
+
 //Answers buttons
-body .quiz-container .answer-btn{
+.answer-btn{
     background-color: #e357bb;
     color: white;
     padding: 15px;
@@ -44,7 +42,8 @@ body .quiz-container .answer-btn{
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-}
+    word-wrap: break-word;
+}}}
 
 #score-container {
   margin-top: 20px;
@@ -69,22 +68,22 @@ body .quiz-container .answer-btn{
 //media Queries
 @media (max-width: 768px) {
   body {
-    padding: 40px; // Add breathing room for mobile
+    padding: 10px; // Add breathing room for mobile
   }
 
   .quiz-container {
-    width: 80%; // Full width on smaller devices
-    padding: 30px; // Adjust padding for smaller screens
+    width: 100%; // Full width on smaller devices
+    padding: 15px; // Adjust padding for smaller screens
     border-radius: 20px;
   }
 
   .quiz-container .question {
-    font-size: 1.5rem; // Adjust question font size
+    font-size: 1.2rem; // Adjust question font size
   }
 
   .quiz-container .answer-btn {
     font-size: 1.2rem; // Adjust button font size for mobile
-    padding: 15px; // Slightly smaller padding
+    padding: 8px; // Slightly smaller padding
   }
 }
 
@@ -105,4 +104,3 @@ body .quiz-container .answer-btn{
     padding: 25px; // More padding for buttons
   }
 }
-
