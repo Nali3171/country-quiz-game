@@ -1,5 +1,5 @@
 // src/styles.scss
-
+ 
 
 body {
   background-color: #de83c4;
@@ -29,12 +29,13 @@ body .quiz-container .question{
   color: #333
 }
 
+//Ansers section
 body .quiz-container .answers{ 
     display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   grid-gap: 15px;
 }
-
+//Answers buttons
 body .quiz-container .answer-btn{
     background-color: #e357bb;
     color: white;
@@ -45,16 +46,63 @@ body .quiz-container .answer-btn{
     cursor: pointer;
 }
 
-@media (min-width: 1024px){
-    .quiz-container{
-        max-width: 60%;
-    }
-
-    .question{
-        font-size: 24px;
-    }
-    .answer-btn{
-        font-size: 20px;
-        padding: 20px;
-    }
+#score-container {
+  margin-top: 20px;
+  font-size: 50;
+  color: #000000;
 }
+
+// Restart button
+.restart-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 20x;
+  font-weight: bold;
+  background-color: #982c61;
+  color: white;
+  border: black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+//media Queries
+@media (max-width: 768px) {
+  body {
+    padding: 40px; // Add breathing room for mobile
+  }
+
+  .quiz-container {
+    width: 80%; // Full width on smaller devices
+    padding: 30px; // Adjust padding for smaller screens
+    border-radius: 20px;
+  }
+
+  .quiz-container .question {
+    font-size: 1.5rem; // Adjust question font size
+  }
+
+  .quiz-container .answer-btn {
+    font-size: 1.2rem; // Adjust button font size for mobile
+    padding: 15px; // Slightly smaller padding
+  }
+}
+
+// Media Queries for Larger Screens
+@media (min-width: 1024px) {
+  .quiz-container {
+    width: 80%; // Larger container for web
+    padding: 70px; // More padding for a bigger container
+    border-radius: 40px;
+  }
+
+  .quiz-container .question {
+    font-size: 2.4rem; // Larger question text for web
+  }
+
+  .quiz-container .answer-btn {
+    font-size: 1.6rem; // Bigger button text for web
+    padding: 25px; // More padding for buttons
+  }
+}
+

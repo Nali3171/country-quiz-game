@@ -1,6 +1,6 @@
 import './styles.scss';
 
-
+ 
 let currentQuestionIndex = 0;
 let score = 0;
 
