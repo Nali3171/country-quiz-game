@@ -1,12 +1,11 @@
 import './styles.scss';
-
- // track the current question index and score
 let currentQuestionIndex = 0;
 let score = 0;
 
 
 //question type
 //create an array of questions text with 4 answer options
+//using objects with key-value pairs
 const questions: Question[] = [
 {
   question: "What is the name of the world's tallest mountain?",
@@ -40,12 +39,12 @@ const questions: Question[] = [
 },
 ];
 
-
 // DOM Elements
 const questionElement = document.querySelector(".question") as HTMLElement;
 const answerButtons = document.querySelectorAll(".answer-btn") as NodeListOf<HTMLButtonElement>;
 const scoreElement = document.getElementById("score") as HTMLElement;
 const restartButton = document.getElementById("restart-button") as HTMLButtonElement;
+const resultElement = document.getElementById("result") as HTMLElement;
 
 
 //start game
@@ -68,13 +67,14 @@ function updateUI() {
     button.disabled = false; // Enable buttons for the new question
   });
 
+  resultElement.textContent ="";
+  
   // Update the score display
   scoreElement.textContent = `Score: ${score}`;
 
   // Hide the restart button
   restartButton.style.display = "none";
 }
-
 
 // when answer button is clicked
 function handleAnswerClick(event: MouseEvent) {
@@ -84,11 +84,15 @@ function handleAnswerClick(event: MouseEvent) {
   // Check if the selected answer is correct
   const currentQuestion = questions[currentQuestionIndex];
   if (selectedAnswerIndex === currentQuestion.correctAnswerIndex) {
-    score++; // Increment score if the answer is correct
-  }
+    score++; 
+    resultElement.textContent = "Correct!";
+    }
+    else{
+      resultElement.textContent = "Incorrect!";
+    }
 
   // Disable all buttons after answering
-  answerButtons.forEach(button => button.disabled = true);
+   answerButtons.forEach(button => button.disabled = true);  
 
   // Move to the next question or end the game
   setTimeout(() => {

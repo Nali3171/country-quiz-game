@@ -1,32 +1,40 @@
 # country-quiz-game
 
--   [ ] make a quiz qhich has multiple choice answers
--   [ ]game tells you if question is correct or incorrect
--   [ ] make sure a final score is given at the end of the game
+-   [x] Make a quiz with multiple-choice answers.
+-   [x] Game tells you if a question is correct or incorrect.
+-   [x] Ensure a final score is displayed at the end of the game.
 
-[ ] - one question at a time
-[ ] - 4 options for answers on the screen
-[ ] - when the player clicks an aswer it will tell you if it right or wrong
+### Game Flow
 
-[ ] - the game will keep track of players score as the answers are picked
-[ ] - after last question diplay score on screen
-[ ] - allow the player to start the quiz again if they would like to
+-   [x] Display one question at a time.
+-   [x] Provide 6 options for answers on the screen.
+-   [x] When the player clicks an answer, indicate if it’s right or wrong.
+-   [x] Keep track of the player's score as they answer questions.
+-   [x] After the last question, display the score on the screen.
+-   [x] Allow the player to start the quiz again if they wish.
 
-[x] - start with basic HTML layout
-[x] - title for game
-[x] - question displayed on the page
-[x] - display 4 answers as buttons
-[x] - score displayed on page
-[ ] - final score diplayed after quiz finished
+### HTML Layout
 
-[x] - start scss
-[x] - put all the content at the centre of the page
-[x] - style the buttons
-[x]- put score at the bottom left of the page
+-   [x] Start with a basic HTML layout.
+-   [x] Add a title for the game.
+-   [x] Display a question on the page.
+-   [x] Show 4 answer options as buttons.
+-   [x] Display the score on the page.
+-   [x] Ensure the final score is displayed after the quiz ends.
 
-[x] - start using typescript to make it work
-[x] - structure of questions (arrays)
-[x] - function to display questions
-[x] - add click events so player can select an answer
-[x] - keep track of score for 6 questions
-[x] - after game ends show final score and let player restart
+### SCSS Styling
+
+-   [x] Center all content on the page.
+-   [x] Style the buttons.
+-   [x] Position the score at the bottom-left corner of the page.
+-   [x] use media queries for mobile phone accessibility
+-   [x] Nest styling
+
+### TypeScript Implementation
+
+-   [x] Define the structure of questions using arrays.
+-   [x] Create a function to display questions.
+-   [x] Add click events to allow the player to select an answer.
+-   [x] Keep track of the score for 6 questions.
+-   [x] Show the final score after the game ends.
+-   [x] Add functionality to let the player restart the quiz.

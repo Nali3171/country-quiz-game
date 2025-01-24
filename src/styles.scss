@@ -26,6 +26,14 @@ body {
   margin-bottom: 20px;
   color: #333
 }
+.result {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #f9005f;
+  height: 20px; // Ensure consistent space, even if empty
+  text-align: center;
+}
 
 //Ansers section
 .answers{ 
