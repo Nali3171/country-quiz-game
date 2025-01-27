@@ -41,9 +41,13 @@ const questions: Question[] = [
 
 // DOM Elements
 const questionElement = document.querySelector(".question") as HTMLElement;
+
 const answerButtons = document.querySelectorAll(".answer-btn") as NodeListOf<HTMLButtonElement>;
+
 const scoreElement = document.getElementById("score") as HTMLElement;
+
 const restartButton = document.getElementById("restart-button") as HTMLButtonElement;
+
 const resultElement = document.getElementById("result") as HTMLElement;
 
 
