@@ -48,7 +48,7 @@ const resultElement = document.getElementById("result") as HTMLElement;
 
 
 //start game
-function startGame(){
+function startGame() {
   currentQuestionIndex = 0;
   score = 0;
  updateUI();
@@ -68,7 +68,7 @@ function updateUI() {
   });
 
   resultElement.textContent ="";
-  
+
   // Update the score display
   scoreElement.textContent = `Score: ${score}`;
 

@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin:0%;
+  margin:0;
 }
 // main quiz container
 .quiz-container{
@@ -18,16 +18,21 @@ body {
     max-width: 400px;
     text-align: center;
 
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 
 // Question
 .question{
-    font-size: 24px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
   color: #333
 }
 .result {
-  font-size: 1.2rem;
+  font-size: 1.2;
   font-weight: bold;
   margin: 10px 0;
   color: #f9005f;
@@ -55,7 +60,7 @@ body {
 
 #score-container {
   margin-top: 20px;
-  font-size: 50;
+  font-size: 20px;
   color: #000000;
 }
 
@@ -63,7 +68,7 @@ body {
 .restart-btn {
   margin-top: 20px;
   padding: 10px 20px;
-  font-size: 20x;
+  font-size: 20px;
   font-weight: bold;
   background-color: #982c61;
   color: white;
