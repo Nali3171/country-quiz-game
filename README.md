@@ -16,24 +16,31 @@
 ### HTML Layout
 
 -   [x] Start with a basic HTML layout.
+-   [x] Add heaher with Game title
 -   [x] Add a title for the game.
 -   [x] Display a question on the page.
 -   [x] Show 4 answer options as buttons.
--   [x] Display the score on the page.
+-   [x] Display the score on the page using <div>.
 -   [x] Ensure the final score is displayed after the quiz ends.
+-   [x] Add restart button.
 
 ### SCSS Styling
 
 -   [x] Center all content on the page.
 -   [x] Style the buttons.
 -   [x] Position the score at the bottom-left corner of the page.
--   [x] use media queries for mobile phone accessibility
--   [x] Nest styling
+-   [x] use media queries for mobile phone accessibility.
+-   [x] Nest styling.
+-   [x] hover effects.
+-   [x] Fixed container size.
 
 ### TypeScript Implementation
 
 -   [x] Define the structure of questions using arrays.
+-   [x] Array of 4 answer options
+-   [x] Index of correct answer
 -   [x] Create a function to display questions.
+-   [x] Display one question at a time
 -   [x] Add click events to allow the player to select an answer.
 -   [x] Keep track of the score for 6 questions.
 -   [x] Show the final score after the game ends.

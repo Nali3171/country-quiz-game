@@ -2,10 +2,8 @@ import './styles.scss';
 let currentQuestionIndex = 0;
 let score = 0;
 
-
 //question type
 //create an array of questions text with 4 answer options
-//using objects with key-value pairs
 const questions: Question[] = [
 {
   question: "What is the name of the world's tallest mountain?",
@@ -50,15 +48,14 @@ const restartButton = document.getElementById("restart-button") as HTMLButtonEle
 
 const resultElement = document.getElementById("result") as HTMLElement;
 
-
 //start game
 function startGame() {
   currentQuestionIndex = 0;
   score = 0;
  updateUI();
-}
+};
 
-//update current questin and answers
+//update current question and answers
 function updateUI() {
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -98,7 +95,7 @@ function handleAnswerClick(event: MouseEvent) {
   // Disable all buttons after answering
    answerButtons.forEach(button => button.disabled = true);  
 
-  // Move to the next question or end the game
+  // Move to the next question 
   setTimeout(() => {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
@@ -121,9 +118,6 @@ function restartGame() {
   score = 0;
   startGame(); // Reset and start the game
 }
-
-
-
 
 // Add event listeners to answer buttons
 answerButtons.forEach(button => button.addEventListener("click", handleAnswerClick));
