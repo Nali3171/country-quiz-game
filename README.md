@@ -1,3 +1,10 @@
+# What happens in the Game
+
+-   [x] First Question displays on screen
+-   [x] player selects answer from 4 options
+-   [x] At the end of the game the final score will show
+-   [x] Player can restart the game
+
 # country-quiz-game
 
 -   [x] Make a quiz with multiple-choice answers.
