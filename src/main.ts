@@ -2,38 +2,44 @@ import './styles.scss';
 let currentQuestionIndex = 0;
 let score = 0;
 
+interface Question {
+  question: string;
+  options: string[];
+  correctAnswer: string;
+}
+
 //question type
 //create an array of questions text with 4 answer options
 const questions: Question[] = [
 {
   question: "What is the name of the world's tallest mountain?",
-  answers: ["Kilimanjaro", "Himalayas", "Mount Everest", "Barisan Mountains"],
-  correctAnswerIndex: 2,
+  options: ["Kilimanjaro", "Himalayas", "Mount Everest", "Barisan Mountains"],
+  correctAnswer: "Mount Everest",
 },
 {
   question: "What is the flattest country in the world?",
-  answers: ["Maldives", "Tanzania", "India", "Russia"],
-  correctAnswerIndex: 0,
+  options: ["Maldives", "Tanzania", "India", "Russia"],
+  correctAnswer: "Maldives",
 },
 {
   question: "Which country is home to the world's longest Tunnel?",
-  answers: ["Hungary", "Albania", "Switzerland", "Argentina"],
-  correctAnswerIndex: 2,
+  options: ["Hungary", "Albania", "Switzerland", "Argentina"],
+  correctAnswer: "Switzerland",
 },
 {
   question: "How many uninhabited villages does Russia have?",
-  answers: ["9,000", "100", "50,000", "13,000"],
-  correctAnswerIndex: 3,
+  options: ["9,000", "100", "50,000", "13,000"],
+  correctAnswer: "13,000",
 },
 {
   question: "What is the Taj Mahal made of?",
-  answers: ["Marble", "Brick", "Rubber", "Timber wood"],
-  correctAnswerIndex: 0,
+  options: ["Marble", "Brick", "Rubber", "Timber wood"],
+  correctAnswer: "Marble",
 },
 {
   question: "what is the most spoken african language?",
-  answers: ["German", "Swahili", "Arabic", "Yoruba"],
-  correctAnswerIndex: 1,
+  options: ["German", "Swahili", "Arabic", "Yoruba"],
+  correctAnswer: "Swahili",
 },
 ];
 
@@ -64,7 +70,7 @@ function updateUI() {
 
   // Update the answer button texts and enable them
   answerButtons.forEach((button, index) => {
-    button.textContent = currentQuestion.answers[index];
+    button.textContent = currentQuestion.options[index];
     button.disabled = false; // Enable buttons for the new question
   });
 
@@ -84,7 +90,7 @@ function handleAnswerClick(event: MouseEvent) {
 
   // Check if the selected answer is correct
   const currentQuestion = questions[currentQuestionIndex];
-  if (selectedAnswerIndex === currentQuestion.correctAnswerIndex) {
+  if (currentQuestion.options[selectedAnswerIndex] === currentQuestion.correctAnswer) {
     score++; 
     resultElement.textContent = "Correct!";
     }
